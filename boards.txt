@@ -1719,6 +1719,46 @@ GenL0.menu.upload_method.bmpMethod.upload.protocol=gdb_bmp
 GenL0.menu.upload_method.bmpMethod.upload.tool=bmp_upload
 
 ################################################################################
+# Generic G0
+GenG0.name=Generic STM32G0 series
+
+GenG0.build.core=arduino
+GenG0.build.board=GenG0
+GenG0.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} -D__CORTEX_SC=0
+GenG0.build.mcu=cortex-m0plus
+GenG0.build.series=STM32G0xx
+GenG0.build.cmsis_lib_gcc=arm_cortexM0l_math
+
+# Aurora One
+GenG0.menu.pnum.AURORA_MICRO=Aurora Micro
+GenG0.menu.pnum.AURORA_MICRO.upload.maximum_size=65536
+GenG0.menu.pnum.AURORA_MICRO.upload.maximum_data_size=16384
+GenG0.menu.pnum.AURORA_MICRO.build.board=Aurora_Micro
+GenG0.menu.pnum.AURORA_MICRO.build.product_line=STM32G031xx
+GenG0.menu.pnum.AURORA_MICRO.build.variant=Aurora_One_G031G8
+
+# Upload menu
+GenG0.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+GenG0.menu.upload_method.swdMethod.upload.protocol=0
+GenG0.menu.upload_method.swdMethod.upload.options=-g
+GenG0.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+GenG0.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+GenG0.menu.upload_method.serialMethod.upload.protocol=1
+GenG0.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+GenG0.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+GenG0.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+GenG0.menu.upload_method.dfuMethod.upload.protocol=2
+GenG0.menu.upload_method.dfuMethod.upload.options=-g
+GenG0.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+GenG0.menu.upload_method.bmpMethod=BMP (Black Magic Probe)
+GenG0.menu.upload_method.bmpMethod.upload.protocol=gdb_bmp
+GenG0.menu.upload_method.bmpMethod.upload.tool=bmp_upload
+
+
+################################################################################
 # Electronic Speed Controller boards
 
 ESC_board.name=Electronic speed controllers
